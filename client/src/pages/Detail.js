@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { useQuery } from '@apollo/react-hooks';
 
-<<<<<<< HEAD
 import Cart from "../components/Cart";
 import { useStoreContext } from "../utils/GlobalState";
 import {
@@ -86,29 +85,6 @@ function Detail() {
   return (
     <>
       {currentProduct && cart ? (
-=======
-import { QUERY_PRODUCTS } from "../utils/queries";
-import spinner from '../assets/spinner.gif'
-
-function Detail() {
-  const { id } = useParams();
-
-  const [currentProduct, setCurrentProduct] = useState({})
-
-  const { loading, data } = useQuery(QUERY_PRODUCTS);
-
-  const products = data?.products || [];
-
-  useEffect(() => {
-    if (products.length) {
-      setCurrentProduct(products.find(product => product._id === id));
-    }
-  }, [products, id]);
-
-  return (
-    <>
-      {currentProduct ? (
->>>>>>> 62dbcef8f61deaa2427f466346b90ac2a1db8c2c
         <div className="container my-1">
           <Link to="/">
             ← Back to Products
@@ -124,7 +100,6 @@ function Detail() {
             <strong>Price:</strong>
             ${currentProduct.price}
             {" "}
-<<<<<<< HEAD
             <button onClick={addToCart}>
               Add to Cart
             </button>
@@ -132,12 +107,6 @@ function Detail() {
               disabled={!cart.find(p => p._id === currentProduct._id)} 
               onClick={removeFromCart}
             >
-=======
-            <button>
-              Add to Cart
-            </button>
-            <button>
->>>>>>> 62dbcef8f61deaa2427f466346b90ac2a1db8c2c
               Remove from Cart
             </button>
           </p>
@@ -151,10 +120,7 @@ function Detail() {
       {
         loading ? <img src={spinner} alt="loading" /> : null
       }
-<<<<<<< HEAD
       <Cart />
-=======
->>>>>>> 62dbcef8f61deaa2427f466346b90ac2a1db8c2c
     </>
   );
 };

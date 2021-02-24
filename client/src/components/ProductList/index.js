@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import React, { useEffect } from "react";
 import ProductItem from "../ProductItem";
 import { useStoreContext } from "../../utils/GlobalState";
@@ -40,36 +39,12 @@ function ProductList() {
     }
 
     return state.products.filter(product => product.category._id === currentCategory);
-=======
-import React from "react";
-import { useQuery } from '@apollo/react-hooks';
-
-import ProductItem from "../ProductItem";
-import { QUERY_PRODUCTS } from "../../utils/queries";
-import spinner from "../../assets/spinner.gif"
-
-function ProductList({ currentCategory }) {
-  const { loading, data } = useQuery(QUERY_PRODUCTS);
-
-  const products = data?.products || [];
-
-  function filterProducts() {
-    if (!currentCategory) {
-      return products;
-    }
-
-    return products.filter(product => product.category._id === currentCategory);
->>>>>>> 62dbcef8f61deaa2427f466346b90ac2a1db8c2c
   }
 
   return (
     <div className="my-2">
       <h2>Our Products:</h2>
-<<<<<<< HEAD
       {state.products.length ? (
-=======
-      {products.length ? (
->>>>>>> 62dbcef8f61deaa2427f466346b90ac2a1db8c2c
         <div className="flex-row">
             {filterProducts().map(product => (
                 <ProductItem
