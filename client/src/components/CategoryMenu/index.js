@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React, { useEffect } from 'react';
 import { useQuery } from '@apollo/react-hooks';
 import { useStoreContext } from '../../utils/GlobalState';
@@ -37,6 +38,15 @@ function CategoryMenu() {
       currentCategory: id
     });
   };
+=======
+import React from "react";
+import { useQuery } from '@apollo/react-hooks';
+import { QUERY_CATEGORIES } from "../../utils/queries";
+
+function CategoryMenu({ setCategory }) {
+  const { data: categoryData } = useQuery(QUERY_CATEGORIES);
+  const categories = categoryData?.categories || [];
+>>>>>>> 62dbcef8f61deaa2427f466346b90ac2a1db8c2c
 
   return (
     <div>
@@ -45,7 +55,11 @@ function CategoryMenu() {
         <button
           key={item._id}
           onClick={() => {
+<<<<<<< HEAD
             handleClick(item._id);
+=======
+            setCategory(item._id);
+>>>>>>> 62dbcef8f61deaa2427f466346b90ac2a1db8c2c
           }}
         >
           {item.name}

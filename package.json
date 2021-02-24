@@ -14,7 +14,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+<<<<<<< HEAD
     "graphql": "^15.5.0",
+=======
+>>>>>>> 62dbcef8f61deaa2427f466346b90ac2a1db8c2c
     "if-env": "^1.0.4"
   },
   "devDependencies": {
