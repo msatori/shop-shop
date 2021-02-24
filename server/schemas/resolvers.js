@@ -1,10 +1,7 @@
 const { AuthenticationError } = require('apollo-server-express');
 const { User, Product, Category, Order } = require('../models');
 const { signToken } = require('../utils/auth');
-<<<<<<< HEAD
 const stripe = require('stripe')('sk_test_4eC39HqLyjWDarjtT1zdp7dc');
-=======
->>>>>>> 62dbcef8f61deaa2427f466346b90ac2a1db8c2c
 
 const resolvers = {
   Query: {
@@ -54,7 +51,6 @@ const resolvers = {
       }
 
       throw new AuthenticationError('Not logged in');
-<<<<<<< HEAD
     },
     checkout: async (parent, args, context) => {
       const url = new URL(context.headers.referer).origin;
@@ -91,8 +87,6 @@ const resolvers = {
       });
 
       return { session: session.id };
-=======
->>>>>>> 62dbcef8f61deaa2427f466346b90ac2a1db8c2c
     }
   },
   Mutation: {
