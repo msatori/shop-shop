@@ -16,7 +16,6 @@ export const QUERY_PRODUCTS = gql`
   }
 `;
 
-<<<<<<< HEAD
 export const QUERY_CHECKOUT = gql`
   query getCheckout($products: [ID]!) {
     checkout(products: $products) {
@@ -25,8 +24,6 @@ export const QUERY_CHECKOUT = gql`
   }
 `;
 
-=======
->>>>>>> 62dbcef8f61deaa2427f466346b90ac2a1db8c2c
 export const QUERY_ALL_PRODUCTS = gql`
   {
     products {

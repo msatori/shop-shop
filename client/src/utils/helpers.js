@@ -1,6 +1,5 @@
 export function pluralize(name, count) {
   if (count === 1) {
-<<<<<<< HEAD
     return name;
   }
   return name + 's';
@@ -54,9 +53,4 @@ export function idbPromise(storeName, method, object) {
       };
     };
   });
-=======
-    return name
-  }
-  return name + 's'
->>>>>>> 62dbcef8f61deaa2427f466346b90ac2a1db8c2c
 }
