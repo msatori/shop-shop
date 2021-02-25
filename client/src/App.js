@@ -31,7 +31,6 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div>
-          //change globalstate for store
           <Provider store={store}>
             <Nav />
             <Switch>
