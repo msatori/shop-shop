@@ -9,7 +9,6 @@ function ProductItem(item) {
   const dispatch = useDispatch();
   const state = useSelector(state => state);
 
-
   const {
     image,
     name,
