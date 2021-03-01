@@ -18,7 +18,7 @@ This is a sample of a e-commerce website built with React Context and refactored
   ## Installation
     npm install
     
-[Deployed App](https://pacific-shelf-31913.herokuapp.com/ "View Deployed Application Here")
+[Deployed App](https://murmuring-scrubland-26245.herokuapp.com/ "View Deployed Application Here")
   ## Usage 
    This application can be used as an introductory model for a redux e-commerce app. 
   ## CREDITS
